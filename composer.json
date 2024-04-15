@@ -4,7 +4,7 @@
   "version": "5.0.0",
   "type": "library",
   "homepage": "https://github.com/Codeception/VisualCeption",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "require": {
     "php": ">=8.0",
     "ext-imagick": "*",
