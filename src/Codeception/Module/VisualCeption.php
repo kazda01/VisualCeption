@@ -112,7 +112,7 @@ class VisualCeption extends CodeceptionModule implements MultiSession
         $this->utils = new Utils();
 
         $this->maximumDeviation = $this->config["maximumDeviation"];
-        $this->saveCurrentImageIfFailure = (boolean)$this->config["saveCurrentImageIfFailure"];
+        $this->saveCurrentImageIfFailure = (bool)$this->config["saveCurrentImageIfFailure"];
         $this->referenceImageDir = (file_exists($this->config["referenceImageDir"]) ? "" : codecept_data_dir()) . $this->config["referenceImageDir"];
 
         if (!is_dir($this->referenceImageDir)) {
@@ -244,7 +244,7 @@ class VisualCeption extends CodeceptionModule implements MultiSession
      * @param string|array $excludeElements string of Element name or array of Element names, which should not appear in the screenshot
      * @param float|null $deviation
      */
-    public function dontSeeVisualChanges(string $identifier, string $elementID = null, array|string $excludeElements = [], float $deviation = null): void
+    public function dontSeeVisualChanges(string $identifier, ?string $elementID = null, array|string $excludeElements = [], ?float $deviation = null): void
     {
         $this->compareVisualChanges($identifier, $elementID, $excludeElements, $deviation, false);
 
